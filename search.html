@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<title>蚂蚁到家--商品搜索</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="css/aui-slide.css" />
+		<style>
+			@media only screen and (min-width:768px) {
+				body {width: 50%;margin: 0 auto;}
+				#search {width: 50%;margin-left: 25%;}
+			}			
+			body {font-family: "微软雅黑";}			
+			.aui-content {width: 100%;height: auto;background: white;margin-top:55px;}
+			.aui-content .list{width: 100%;height:50px;text-align: center;background: white;border-bottom:1px solid #C0C0C0;line-height: 50px;}
+			.aui-content .list a span{color: black;}			
+		</style>
+	</head>
+
+	<body>
+		<header class="aui-bar aui-bar-nav"  id="header">
+			<a class="aui-pull-left aui-btn" href="javascript:history.go(-1)">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">商品搜索</div>
+		</header>
+		<div class="aui-searchbar" id="search">
+			<div class="aui-searchbar-input aui-border-radius" tapmode onclick="doSearch()">
+				<i class="aui-iconfont aui-icon-search"></i>
+				<form action="javascript:search();">
+					<input type="search" placeholder="请输入搜索内容" id="search-input">
+				</form>
+			</div>
+			<div class="aui-searchbar-cancel" tapmod>取消</div>
+		</div>
+		<div class="aui-content">
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="index.html"><span>首页</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>女装</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>男装</span></a>
+				</div>
+			</div>
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="#"><span>鞋子</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>箱包</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>母婴</span></a>
+				</div>
+			</div>
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="#"><span>美妆</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>居家</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>家纺</span></a>
+				</div>
+			</div>
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="#"><span>文体</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>美食</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>数码</span></a>
+				</div>
+			</div>
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="#"><span>电器</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>内衣</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>配饰</span></a>
+				</div>
+			</div>
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="#"><span>9.9包邮</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>20元封顶</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>明日预告</span></a>
+				</div>
+			</div>
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="#"><span>优惠券</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>巨划算</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>优惠券</span></a>
+				</div>
+			</div>
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="#"><span>买家秀</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>巨划算</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>优惠券</span></a>
+				</div>
+			</div>
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="#"><span>买家秀</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>巨划算</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>专题街</span></a>
+				</div>
+			</div>
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="#"><span>精品汇</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>积分商城</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>文章中心</span></a>
+				</div>
+			</div>
+			<div class="list">
+				<div class="aui-col-xs-4">
+					<a href="#"><span>品牌团</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>九块邮</span></a>
+				</div>
+				<div class="aui-col-xs-4">
+					<a href="#"><span>京东优品</span></a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+	</script>
+
+</html>

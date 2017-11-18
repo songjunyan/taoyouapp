@@ -1,0 +1,43 @@
+.login{width: 100%;height: 250px;margin-top:20px;}
+.login-content{width:100%;height:100px;background: white;}
+.login-content-name,.login-content-lock{width:90%;height: 50px;line-height: 50px;margin: 0 auto;}
+.login-content-name{border-bottom: 1px solid #D3D3D3;}
+.login-content-name input{margin-top:50px;}
+.form{margin-top: 40px;width: 100%;height: 40px;}
+.top{width: 100%;height: 40px;text-align: center;}
+.top div{width: 100px;height: 40px;background: white;line-height: 40px;margin: 0 auto;text-align: center;font-size: 12px;margin-top: 20px;}
+.footer{width: 100%;height: 100px;margin-top: 10px;}
+.footer img{max-width:80px;height: auto;min-width: 40px;}
+
+
+.register{width: 100%;height:auto;margin-top:20px;font-size: 12px;}
+.register form{width: 100%;background: white;height:300px; }
+.forget{width: 100%;height: 40px;text-align: right;line-height:40px;font-size: 12px;}
+.forget a{color:#8E8E93;}
+
+
+.user{width: 100%;height:100px;background: white;margin-top:20px;}
+.user img{border-radius: 50%;width: 70px;height: auto;margin: 10px;}
+.user span{font-size: 14px;line-height: 100px;}
+.user-menu{width: 100%;height:220px;background: white;margin-top: 20px;}
+.user-menu span{font-size: 14px;}
+.user-menu ul li a{color: black;}
+
+
+/*商品详情*/
+.pig{width:100%;height:auto;background:white;}
+.pig img{width: 100%;height: auto;}
+.pig .money{width: 100%;height: 40px;text-align: center;line-height: 40px;font-size:8px;}
+.pig .money p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.pig .money .money-1{color: deeppink;font-size: 25px;}
+.pig .money .money-2{text-decoration:line-through;color: #DDDDDD;}
+.pig .money img{width: 15px;height: auto;}
+.pig .jie{width: 90%;height: 100x;margin: 0 auto;}
+.pig .jie img{width: 100%;height: auto;}
+.go{width: 100%;height: 40px;margin-top: 10px;overflow: hidden;background:#E91E63;color: white;line-height: 40px;text-align: center;}
+.go:hover{background: white;color:#E91E63 ;}
+#tab{border: 1px solid #D9D9D9;}
+.tab-tt{width: 100%;height:auto;}
+.tab-tt img{width: 100%;height: auto;}
+.tab-fot{width: 100%;height: auto;margin-top: 20px;overflow: hidden;background: white;}
+.tab-fot-a{width: 100%;height: 40px;line-height: 40px;}

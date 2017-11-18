@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<title>蚂蚁到家--修改资料--账户资料</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+		<script src="../js/jquery.js"></script>
+		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+		<style>
+			@media only screen and (min-width:768px) {
+				body,
+				#footer {
+					width: 50%;
+					margin: 0 auto;
+				}
+			}
+			
+			body {
+				font-family: "微软雅黑";
+			}
+		</style>
+		<script>
+			$.validator.setDefaults({
+				submitHandler: function() {
+					alert("提交事件!");
+				}
+			});
+			$().ready(function() {
+				// 在键盘按下并释放及提交后验证提交表单
+				$("#signupForm").validate({
+					rules: {
+						password: {
+							required: true,
+							minlength: 6,
+							maxlength: 16,
+							equalTo: "#password"
+						},
+						qq: {
+							qq: true
+						},
+						email: {
+							required: true,
+							email: true
+						}
+						username: {
+							username: true
+						}
+						phone: {
+							phone: true
+						}
+						address: {
+							required: true
+						}
+						select: {
+							min: 1
+						},
+					}
+					messages: {
+						password: {
+							required: "请输入登录密码",
+							minlength: "密码长度不能少于6个字母",
+							maxlength: "密码长度不能大于16位"
+						}
+						qq: {
+							qq: "请输入您的qq号码"
+						},
+						email: "请输入一个正确的邮箱地址",
+						username: {
+							username: "请输入您的名字"
+						},
+						phone: {
+							phone: "请输入您的电话号码"
+						},
+						address: {
+							required: "请输入您的详细地址"
+						},
+						select: {
+							min: "必选"
+						}
+					}
+				});
+			});
+
+			//QQ号码验证
+			jQuery.validator.addMethod("qq", function(value, element) {
+				var tel = /^[1-9][0-9]{4,}$/;
+				return this.optional(element) || (tel.test(value));
+			}, "请正确填写您的QQ号码");
+
+			//真实姓名验证
+			jQuery.validator.addMethod("username", function(value, element) {
+				return this.optional(element) || /^[\u4e00-\u9fa5]{2,30}$/.test(value);
+			}, "姓名只能为2-30个汉字");
+
+			// 手机号码验证
+			jQuery.validator.addMethod("phone", function(value, element) {
+				var length = value.length;
+				return this.optional(element) || (length == 11 && /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/.test(value));
+			}, "请正确填写您的手机号码");
+		</script>
+	</head>
+
+	<body>
+		<header class="aui-bar aui-bar-nav" id="header">
+			<a class="aui-pull-left aui-btn" href="javascript:history.go(-1)">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">修改资料</div>
+			<a class="aui-pull-right aui-btn">
+				<span class="aui-iconfont aui-icon-calendar"></span>
+			</a>
+		</header>
+		<div class="aui-tab" id="tab" style="margin-top:3px;">
+			<div class="aui-tab-item aui-active" style="background:#E91E63;">
+				<a href="info.html" style="color: white;">账户资料</a>
+			</div>
+			<div class="aui-tab-item" style="background:#E6E6E6;">
+				<a href="password.html" style="color: black;">修改密码</a>
+			</div>
+			<div class="aui-tab-item" style="background:#E6E6E6;">
+				<a href="avatar.html" style="color: black;">头像设置</a>
+			</div>
+			<div class="aui-tab-item" style="background:#E6E6E6;">
+				<a href="bind.html" style="color: black;">账户绑定</a>
+			</div>
+		</div>
+		<div style="width: 100%;height:auto;overflow:hidden;line-height: 40px;color: #EC971F;background:khaki;border-top:1px solid #E91E63;">
+			&nbsp; <i class="aui-iconfont aui-icon-info"></i><span>保障您的账号安全！建议您养成定期修改密码的好习惯！</span>
+		</div>
+		<div class="info">
+			<div class="info-img">
+				<form class="cmxform" id="signupForm" method="get" action="">
+					<div class="aui-col-xs-12 ss">
+						<div class="aui-col-xs-4">
+							<span>登录密码：</span>
+						</div>
+						<div class="aui-col-xs-8">
+							<input type="password" id="password" name="password" />
+						</div>
+					</div>
+					<div class="aui-col-xs-12 ss">
+						<div class="aui-col-xs-4">
+							<span>QQ号码：</span>
+						</div>
+						<div class="aui-col-xs-8">
+							<input type="text" id="qq" name="qq" />
+						</div>
+					</div>
+					<div class="aui-col-xs-12 ss">
+						<div class="aui-col-xs-4">
+							<span>电子邮箱：</span>
+						</div>
+						<div class="aui-col-xs-8">
+							<input type="email" id="email" name="email" />
+						</div>
+					</div>
+					<div class="aui-col-xs-12 ss">
+						<div class="aui-col-xs-4">
+							<span>真实姓名：</span>
+						</div>
+						<div class="aui-col-xs-8">
+							<input type="text" id="username" name="username" />
+						</div>
+					</div>
+					<div class="aui-col-xs-12 ss">
+						<div class="aui-col-xs-4">
+							<span>手机号码：</span>
+						</div>
+						<div class="aui-col-xs-8">
+							<input type="text" id="phone" name="phone" />
+						</div>
+					</div>
+					<div class="aui-col-xs-12 ss">
+						<div class="aui-col-xs-4">
+							<span>详细地址：</span>
+						</div>
+						<div class="aui-col-xs-8">
+							<input type="text" id="address" name="address" />
+						</div>
+					</div>
+					<div class="aui-col-xs-12 ss">
+						<div class="aui-col-xs-4">
+							<span>是否推送：</span>
+						</div>
+						<div class="aui-col-xs-8">
+							<select id="select" name="select" style="border: 1px solid #CCCCCC;width:20%;background: #ADADAD;">
+								<option>否</option>
+								<option>是</option>
+							</select>
+						</div>
+					</div>
+					<div class="aui-col-xs-12 ss" style="text-align: center;">
+						<button style="background: deeppink;color: white;" class="submit">保存信息</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+		<div class="content2">
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/phone.png" />&nbsp;<span>电脑端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/client.png" style="height:20px;width:13px;" />&nbsp;<span>手机端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/home.png" />&nbsp;<span>返回首页</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-12" style="text-align: center;">
+				<span style="font-size: 10px;color: #DFDFDF;">————————copyright © 蚂蚁到家-精挑细选————————</span>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+	</script>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<title>蚂蚁到家--修改资料--账号绑定</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+		<style>
+			@media only screen and (min-width:768px) {
+				body{width: 50%;margin: 0 auto;}
+			}			
+			body {font-family: "微软雅黑";}			
+		</style>
+	</head>
+
+	<body>
+		<header class="aui-bar aui-bar-nav"  id="header">
+			<a class="aui-pull-left aui-btn" href="javascript:history.go(-1)">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">账号绑定</div>
+			<a class="aui-pull-right aui-btn">
+				<span class="aui-iconfont aui-icon-calendar"></span>
+			</a>
+		</header>
+		
+		<div class="aui-tab" id="tab" style="margin-top:3px;">
+			<div class="aui-tab-item" style="background:#E6E6E6;">
+				<a href="info.html" style="color: black;">账户资料</a>
+			</div>
+			<div class="aui-tab-item" style="background:#E6E6E6;">
+				<a href="password.html" style="color: black;">修改密码</a>
+			</div>
+			<div class="aui-tab-item" style="background:#E6E6E6;">
+				<a href="avatar.html" style="color: black;">头像设置</a>
+			</div>
+			<div class="aui-tab-item  aui-active" style="background:#E91E63;">
+				<a href="bind.html" style="color: white;">账户绑定</a>
+			</div>
+		</div>
+		<div style="width: 100%;height:auto;overflow:hidden;line-height: 40px;color: #EC971F;background:khaki;border-top:1px solid #E91E63;">
+			&nbsp; <i class="aui-iconfont aui-icon-info"></i><span>绑定您的第三方网站账号，可以使用任意一个账号登录,更快捷更方便。</span>
+		</div>
+		<div class="info">
+			<div class="info-img" style="width: 100%;">
+				<div class="info-img-sd">
+					<div class="aui-col-xs-2">
+						<img src="../img/api_qq.jpg"/>
+					</div>
+					<div class="aui-col-xs-5">
+						<span>QQ登录（未绑定）</span>
+					</div>
+					<div class="aui-col-xs-2">
+						<img src="../img/api_p.jpg"/>
+					</div>
+					<div class="aui-col-xs-3"style="text-align: center;">
+						<button style="background:#46B8DA;color: white;">立即绑定</button>
+					</div>
+				</div>
+				<div class="info-img-sd">
+					<div class="aui-col-xs-2">
+						<img src="../img/api_taobao.jpg"/>
+					</div>
+					<div class="aui-col-xs-5">
+						<span>淘宝登录（未绑定）</span>
+					</div>
+					<div class="aui-col-xs-2">
+						<img src="../img/api_p.jpg"/>
+					</div>
+					<div class="aui-col-xs-3"style="text-align: center;">
+						<button style="background:#46B8DA;color: white;">立即绑定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content2">
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/phone.png" />&nbsp;<span>电脑端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/client.png" style="height:20px;width:13px;" />&nbsp;<span>手机端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/home.png" />&nbsp;<span>返回首页</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-12" style="text-align: center;">
+				<span style="font-size: 10px;color: #DFDFDF;">————————copyright © 蚂蚁到家-精挑细选————————</span>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+	</script>
+
+</html>

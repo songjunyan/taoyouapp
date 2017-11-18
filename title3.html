@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<title>蚂蚁到家--个人中心</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style2.css" />
+		<link rel="stylesheet" type="text/css" href="css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="css/aui-slide.css" />
+		<style>
+			@media only screen and (min-width:768px) {
+				body,#footer {width: 50%;margin: 0 auto;}
+			}	
+			body {font-family: "微软雅黑";}
+		</style>
+		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+		<script>
+			$.validator.setDefaults({
+				submitHandler: function() {
+					alert("提交事件!");
+				}
+			});
+			$().ready(function() {
+				// 在键盘按下并释放及提交后验证提交表单
+				$("#myForm").validate();
+//					rules: {
+//						username:{
+//							required:true,
+//							minlength;2
+//						},
+//						password:{
+//							required:true,
+//							minlength:6
+//						}
+//					},
+//					messages:{
+//						username:{
+//							required:"请输入用户名",
+//							minlength:"用户名必须由两个字母组成"
+//						},
+//						password:{
+//							required:"请输入密码",
+//							minlength:"密码长度不能小于6位数"
+//						}
+//					}
+//				});
+			});
+		</script>
+		<style>
+			.error {color: red;}
+		</style>
+	</head>
+
+	<body>
+		<header class="aui-bar aui-bar-nav" id="header">
+			<a class="aui-pull-left aui-btn" href="javascript:history.go(-1)">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">会员登录</div>
+			<a class="aui-pull-right aui-btn" href="register.html">
+				<span>注册</span>
+			</a>
+		</header>
+		<div class="top">
+			<div>账号登录</div>
+		</div>
+		<div class="login">
+			<div class="login-content">
+				<form id="myForm" class="cmxform" action="" method="get">
+					<div class="login-content-name">
+						<span class="aui-iconfont aui-icon-my aui-icon-left" for="username"></span>
+						<div style="margin-top:-50px;margin-left:50px;width: 50%;">
+							<input type="text" placeholder="请输入用户名" id="username" name="username" style="font-size: 14px;" />
+						</div>
+					</div>
+					<div class="login-content-lock">
+						<i class="aui-iconfont aui-icon-lock aui-icon-left" for="password"></i>
+						<div style="margin-top:-55px;margin-left:50px;width: 50%;">
+							<input type="password" placeholder="请输入密码" id="password" name="password" style="font-size: 14px;" />
+						</div>
+					</div>
+
+					<div class="form">
+						<p>
+							<div class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm" class="submit">登录</div>
+						</p>
+					</div>
+				</form>
+				<div class="forget">
+					<a href="javascript:if(confirm('为了您的账户安全，请使用电脑找回密码。'))location='http://www.google.com'"><span>忘记密码吗？</span></a>
+					<script>
+						function delete_confirm(e) {
+							if(event.srcElement.outerText == "确定") {
+								event.returnValue = confirm("为了您的账户安全，请使用电脑找回密码。");
+							}
+						}
+						document.onclick = delete_confirm;
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="top">
+			<div>快速登录</div>
+		</div>
+		<div class="footer">
+			<div class="aui-col-xs-4" style="text-align: center;">
+				<a><img src="img/wap_qq.png" /></a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a><img src="img/wap_taobao.png" /></a>
+			</div>
+		</div>
+		<div class="content2">
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="img/phone.png" />&nbsp;<span>电脑端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="img/client.png" style="height:20px;width:13px;" />&nbsp;<span>手机端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="img/home.png" />&nbsp;<span>返回首页</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-12" style="text-align: center;">
+				<span style="font-size: 10px;color: #DFDFDF;">—————copyright © 蚂蚁到家-精挑细选—————</span>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+	</script>
+
+</html>

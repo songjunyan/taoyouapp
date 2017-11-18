@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<title>蚂蚁到家--我的收藏夹</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+		<style>
+			@media only screen and (min-width:768px) {
+				body,#footer {width: 50%;margin: 0 auto;}
+			}			
+			body {font-family: "微软雅黑";}
+
+		</style>
+	</head>
+
+	<body>
+		<header class="aui-bar aui-bar-nav"  id="header">
+			<a class="aui-pull-left aui-btn" href="javascript:history.go(-1)">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">我的收藏夹</div>
+			<a class="aui-pull-right aui-btn">
+				<span class="aui-iconfont aui-icon-calendar"></span>
+			</a>
+		</header>
+
+		<div class="content2">
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/phone.png" />&nbsp;<span>电脑端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/client.png" style="height:20px;width:13px;" />&nbsp;<span>手机端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/home.png" />&nbsp;<span>返回首页</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-12" style="text-align: center;">
+				<span style="font-size: 10px;color: #DFDFDF;">————————copyright © 蚂蚁到家-精挑细选————————</span>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+	</script>
+
+</html>

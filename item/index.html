@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<title>蚂蚁到家--商品详情</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/style2.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+		<style>
+			@media only screen and (min-width:768px) {
+				body,
+				#footer {
+					width: 50%;
+					margin: 0 auto;
+				}
+			}
+			
+			body {
+				font-family: "微软雅黑";
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="aui-bar aui-bar-nav" id="header">
+			<a class="aui-pull-left aui-btn" href="javascript:history.go(-1)">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">商品详情</div>
+			<a class="aui-pull-right aui-btn">
+				<span class="aui-iconfont aui-icon-calendar"></span>
+			</a>
+		</header>
+		<div class="pig">
+			<img src="../img/430.jpg" />
+			<div class="money">
+				<span class="money-1">￥9.9</span>&nbsp;<span class="money-2">￥19.80</span>
+			</div>
+			<div class="money">
+				<p>加厚耐磨行李箱套 旅行箱拉杆箱弹力防尘罩 防水皮箱保护套子24寸</p>
+			</div>
+			<div class="money" style="text-align: left;">
+				<span>分享到：</span>
+				<span>
+					<a><img src="../image/kongjian.jpg"/></a>&nbsp;
+					<a><img src="../image/w3.jpg"/></a>&nbsp;
+					<a><img src="../image/w.jpg"/></a>&nbsp;
+					<a><img src="../image/w1.jpg"/></a>&nbsp;
+					<a><img src="../image/w2.jpg"/></a>
+				</span>
+			</div>
+			<div class="jie">
+				<img src="../image/jie.png" />
+			</div>
+		</div>
+
+		<div class="go">
+			<span>即将开始</span>
+		</div>
+
+		<div class="aui-tab" id="tab">
+			<div class="aui-tab-item aui-active">图文详情</a>
+			</div>
+		</div>
+		<div class="tab-tt">
+			<img src="../img/dtl.jpg" />
+			<img src="../img/dtl2.jpg" />
+			<img src="../img/dtl3.jpg" />
+			<img src="../img/dtl4.jpg" />
+		</div>
+		<div class="aui-tab" id="tab">
+			<div class="aui-tab-item aui-active">商品评论</a>
+			</div>
+		</div>
+		<style>
+			.textarea {
+				width: 95%;
+				height: 80px;
+				margin: 0 auto;
+				position: absolute;
+				background: none;
+				z-index: 9
+			}
+			
+			.note {
+				position: absolute;
+				line-height: 20px;
+				padding: 3px 5px;
+			}
+		</style>
+		<div class="tab-tt" style="border: 1px solid #E3E3E3;height: 120px;width: 100%;">
+			<div style="position:relative;">
+				<textarea class="textarea" onfocus="document.getElementById('note').style.display='none'" onblur="if(value=='')document.getElementById('note').style.display='block'"></textarea>
+				<div id="note" class="note">
+					<font color="#777">在这里写入你对商品的看法,客服态度等等</font>
+				</div>
+			</div>
+		</div>
+		<div class="aui-col-xs-12" style="text-align: right;margin-top:10px;">
+			<button class="btn btn-default">发表评论</button>
+		</div>
+		<div class="tab-fot">
+			<div class="tab-fot-a">
+				<div class="aui-col-xs-12"><span>&nbsp;&nbsp;猜你喜欢</span></div>
+			</div>
+			<div class="content">
+				<div class="aui-col-xs-6">
+					<a href="#">
+						<div class="tu">
+							<img src="../image/like.jpg" />
+							<div class="ffont">
+								<p>加厚耐磨行李箱保护套20皮箱子防尘罩24旅行箱套子80</p>
+							</div>
+							<div class="ffont">
+								<div class="aui-col-xs-9">
+									<span style="color: red;text-align: left;">￥<span style="font-size: 20px;">10</span></span><span style="border: 1px solid red;color:red;">&nbsp;满68减3&nbsp;</span>
+								</div>
+								<div class="aui-col-xs-3">
+									<span style="color: red;">淘宝</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="aui-col-xs-6">
+					<a href="#">
+						<div class="tu">
+							<img src="../img/430.jpg" />
+							<div class="ffont">
+								<p>加厚耐磨行李箱套 旅行箱拉杆箱弹力防尘罩 防水皮箱保护套子24寸</p>
+							</div>
+							<div class="ffont">
+								<div class="aui-col-xs-9">
+									<span style="color: red;text-align: left;">￥<span style="font-size: 20px;">10</span></span><span style="border: 1px solid red;color:red;">&nbsp;满68减3&nbsp;</span>
+								</div>
+								<div class="aui-col-xs-3">
+									<span style="color: red;">淘宝</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="tab-fot-a" style="background: white;margin-top:20px;">
+			<div class="aui-col-xs-12"><span>&nbsp;&nbsp;已有<span class="num">0</span>人收藏</span>
+			</div>
+		</div>
+		<div class="content2">
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/phone.png" />&nbsp;<span>电脑端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/client.png" style="height:20px;width:13px;" />&nbsp;<span>手机端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/home.png" />&nbsp;<span>返回首页</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-12" style="text-align: center;">
+				<span style="font-size: 10px;color: #DFDFDF;">————————copyright © 蚂蚁到家-精挑细选————————</span>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript" src="../js/aui-tab.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+	</script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+		var tab = new auiTab({
+			element: document.getElementById("tab"),
+			// callback:function(o,dom){
+			//     console.log(o);
+			// }
+		}, function(ret) {
+			console.log(ret)
+		});
+	</script>
+
+</html>

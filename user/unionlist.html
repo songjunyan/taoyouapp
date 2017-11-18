@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<title>蚂蚁到家--邀请好友--我要邀请</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+		<style>
+			@media only screen and (min-width:768px) {
+				body,#footer {width: 50%;margin: 0 auto;}
+			}			
+			body {font-family: "微软雅黑";}
+		</style>
+	</head>
+
+	<body>
+		<header class="aui-bar aui-bar-nav" id="header">
+			<a class="aui-pull-left aui-btn" href="javascript:history.go(-1)">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title">邀请好友</div>
+			<a class="aui-pull-right aui-btn">
+				<span class="aui-iconfont aui-icon-calendar"></span>
+			</a>
+		</header>
+        <div class="aui-tab" id="tab" style="margin-top: 3px;">
+			<div class="aui-tab-item"style="background:#EBECED;">
+				<a href="union.html" style="color: black;">我要邀请</a>
+			</div>
+			<div class="aui-tab-item aui-active" style="background:#E91E63;">
+				<a href="unionlist.html" style="color: white">我的邀请</a>
+			</div>
+		</div>
+		<div class="plase">
+			<div class="plase-1">
+				<div class="aui-col-xs-1">&nbsp;<i class="aui-iconfont aui-icon-info"></i></div>
+				<div class="aui-col-xs-11">
+					<p>通过您的专属邀请链接邀请好友访问蚂蚁到家-精挑细选，您将获得20金币，每天最多可以获得200金币！</p>
+					<p>如果邀请的好友成功注册蚂蚁到家-精挑细选账号，您将获得100金币，您每天最多可以获得1000个金币！</p>
+				</div>
+			</div>
+			<div class="myPlase">
+				<table style="width: 100%;">
+					<thead>
+						<tr style="background:#E6E6E6">
+							<th>类别</th>
+							<th>用户</th>
+							<th>奖励</th>
+							<th>邀请时间</th>
+						</tr>
+					</thead>
+				</table>
+				<div class="info">
+					<p style="margin-top:60px;">还没有好友通过您的邀请注册哦！</p>
+					<p>邀请好友，得金币！<a href="#">赶快行动吧</a>！</p>
+				</div>
+			</div>
+		</div>
+		<div class="content2">
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/phone.png" />&nbsp;<span>电脑端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/client.png" style="height:20px;width:13px;" />&nbsp;<span>手机端</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-4">
+				<a href="#">
+					<img src="../img/home.png" />&nbsp;<span>返回首页</span>
+				</a>
+			</div>
+			<div class="aui-col-xs-12" style="text-align: center;">
+				<span style="font-size: 10px;color: #DFDFDF;">————————copyright © 蚂蚁到家-精挑细选————————</span>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.parseTapmode();
+		}
+	</script>
+
+</html>
